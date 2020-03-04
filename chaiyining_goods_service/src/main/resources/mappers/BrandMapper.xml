@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.chaiyining.dao.BrandDao">
+ 
+   	
+   	<!-- 列表查询 -->
+   	<select id="list" resultType="brand">
+   		select * from hg_brand 
+   		<where>
+   			<if test="value!=null and value !=''">
+   				and name like concat('%',#{value},'%')
+   			</if>
+   		</where>
+   		ORDER BY id
+   	</select>
+   	
+
+</mapper>

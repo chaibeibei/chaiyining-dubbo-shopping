@@ -9,9 +9,9 @@ public class Spec_Option implements Serializable {
 	 */
 	private static final long serialVersionUID = 5000863344563130690L;
 	private Integer id;
-	private Integer option_name;
+	private String option_name;
 	private Integer spec_id;
-	private Integer orders;
+	private Integer orders=0;
 
 	public Integer getId() {
 		return id;
@@ -21,11 +21,11 @@ public class Spec_Option implements Serializable {
 		this.id = id;
 	}
 
-	public Integer getOption_name() {
+	public String getOption_name() {
 		return option_name;
 	}
 
-	public void setOption_name(Integer option_name) {
+	public void setOption_name(String option_name) {
 		this.option_name = option_name;
 	}
 
@@ -45,7 +45,7 @@ public class Spec_Option implements Serializable {
 		this.orders = orders;
 	}
 
-	public Spec_Option(Integer id, Integer option_name, Integer spec_id, Integer orders) {
+	public Spec_Option(Integer id, String option_name, Integer spec_id, Integer orders) {
 		super();
 		this.id = id;
 		this.option_name = option_name;
